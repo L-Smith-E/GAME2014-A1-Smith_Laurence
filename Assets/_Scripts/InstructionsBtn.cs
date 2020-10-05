@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PlayBtn : MonoBehaviour
+
+public class InstructionsBtn : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -17,8 +18,8 @@ public class PlayBtn : MonoBehaviour
         
     }
 
-    public void PlayBtnPressed()
+    public void InstructionsBtnPressed()
     {
-        SceneManager.LoadScene("Play");
+        SceneManager.LoadScene("Instructions");
     }
 }
