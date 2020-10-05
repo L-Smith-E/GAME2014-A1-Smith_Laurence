@@ -1,5 +1,7 @@
 # GAME2014-A1-Smith_Laurence
+Developer:
 Laurence Smith
+Student Number:
 101119045
 Date Last Modified: 
 October 5th 2020
