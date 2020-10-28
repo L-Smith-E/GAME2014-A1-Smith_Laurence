@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class BlockController : MonoBehaviour
 {
+
     private int rows = 5;
     private int cols = 8;
     private float tileSize = 1.0f;
@@ -22,8 +23,8 @@ public class BlockController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       _GenerateGrid();
-       _CheckBounds();
+        _GenerateGrid();
+        _CheckBounds();
     }
 
     private void _GenerateGrid()
@@ -37,7 +38,7 @@ public class BlockController : MonoBehaviour
 
                 float posx = col * tileSize;
                 float posY = row * -tileSize;
-                 _Move();
+                _Move();
             }
         }
     }

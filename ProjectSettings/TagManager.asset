@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - RegularBlock
+  - RedBlock
+  - BlankBlock
+  - PurpleBlock
+  - GoldBlock
+  - Bomb
   layers:
   - Default
   - TransparentFX
