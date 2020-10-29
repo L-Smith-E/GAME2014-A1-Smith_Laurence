@@ -1,6 +1,13 @@
-﻿using System.Collections;
+﻿/*-------------------Header---------------------
+ * BlockSpawner.cs
+ * Laurence Smith
+ * 101119045
+ * Date Last Modified: 28-10-2020
+ * Creates and manages block types
+ * 
+ */
+using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Build;
 using UnityEngine;
 using UnityEngine.UI;
 
