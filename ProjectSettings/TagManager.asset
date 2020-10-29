@@ -10,6 +10,10 @@ TagManager:
   - PurpleBlock
   - GoldBlock
   - Bomb
+  - Score2
+  - Score3
+  - ReverseBlock
+  - ghostBlock
   layers:
   - Default
   - TransparentFX

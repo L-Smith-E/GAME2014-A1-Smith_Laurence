@@ -19,6 +19,7 @@ public class PlayBtn : MonoBehaviour
 
     public void PlayBtnPressed()
     {
+        ScoreSystem.currentscore = 0;
         SceneManager.LoadScene("Play");
     }
 }

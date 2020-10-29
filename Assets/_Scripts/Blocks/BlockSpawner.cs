@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Build;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BlockSpawner : MonoBehaviour
 {
@@ -16,6 +18,7 @@ public class BlockSpawner : MonoBehaviour
     public int Type;
     private bool b;
     private float tempY;
+    private float timer = 10.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -37,6 +40,16 @@ public class BlockSpawner : MonoBehaviour
         //}
         Destroy(block, 10);
 
+        timer -= Time.deltaTime;
+
+        
+
+        if (block == null)
+        {
+            b = true;
+        }
+        
+        
     }
 
     //private void _CheckBounds()
@@ -48,6 +61,7 @@ public class BlockSpawner : MonoBehaviour
     {
         //dropBlock();
         //_CheckBounds();
+        
         if (Time.time > spawnTime)
         { 
             rate = Random.Range(2.0f, 9.0f);
@@ -58,40 +72,102 @@ public class BlockSpawner : MonoBehaviour
             {
                 case 1:
                     _block(Blank);
+                if (timer <= 0.0f)
+                {
+            ScoreSystem.currentscore += 100;
+                }
                     break;
                 case 2:
                     _block(Regular);
+                    timer -= Time.deltaTime;
+                    if (timer <= 0.0f)
+                    {
+                        ScoreSystem.currentscore += 100 * ScoreSystem.scoreMp;
+                    }
                     break;
                 case 3:
                     _block(Red);
+                    timer -= Time.deltaTime;
+                    if (timer <= 0.0f)
+                    {
+                        ScoreSystem.currentscore += 100 * ScoreSystem.scoreMp;
+                    }
                     break;
                 case 4:
                     _block(Purple);
+                    timer -= Time.deltaTime;
+                    if (timer <= 0.0f)
+                    {
+                        ScoreSystem.currentscore += 100 * ScoreSystem.scoreMp;
+                    }
                     break;
                 case 5:
                     _block(Gold);
+                    timer -= Time.deltaTime;
+                    if (timer <= 0.0f)
+                    {
+                        ScoreSystem.currentscore += 100 * ScoreSystem.scoreMp;
+                    }
                     break;
                 case 6:
                     _block(Bomb);
+                    timer -= Time.deltaTime;
+                    if (timer <= 0.0f)
+                    {
+                        ScoreSystem.currentscore += 100 * ScoreSystem.scoreMp;
+                    }
                     break;
                 case 7:
                     _block(Ghost);
+                    timer -= Time.deltaTime;
+                    if (timer <= 0.0f)
+                    {
+                        ScoreSystem.currentscore += 100 * ScoreSystem.scoreMp;
+                    }
                     break;
                 case 8:
                     _block(Reverse);
+                    timer -= Time.deltaTime;
+                    if (timer <= 0.0f)
+                    {
+                        ScoreSystem.currentscore += 100 * ScoreSystem.scoreMp;
+                    }
                     break;
                 case 9:
                     _block(Freeze);
+                    timer -= Time.deltaTime;
+                    if (timer <= 0.0f)
+                    {
+                        ScoreSystem.currentscore += 100 * ScoreSystem.scoreMp;
+                    }
                     break;
                 case 10:
                     _block(Score2);
+                    timer -= Time.deltaTime;
+                    if (timer <= 0.0f)
+                    {
+                        ScoreSystem.currentscore += 100 * ScoreSystem.scoreMp;
+                    }
                     break;
                 case 11:
                     _block(Score3);
+                    timer -= Time.deltaTime;
+                    if (timer <= 0.0f)
+                    {
+                        ScoreSystem.currentscore += 100 * ScoreSystem.scoreMp;
+                    }
                     break;
             }
 
             spawnTime = Time.time + rate;
+            
+            if (b == true)
+            {
+                ScoreSystem.currentscore += 100;
+                b = false;
+            }
+
+            
         }
     }
         
